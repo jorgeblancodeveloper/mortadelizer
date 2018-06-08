@@ -1,0 +1,108 @@
+<html>
+   <head>
+      <title>Plantilla</title>
+      <style>
+         body {
+         width: 250px;
+         background:#fdfdfd;
+         text-align:center;
+         position: relative;
+         } 
+         header{
+         display:flex;
+         align-items: center;
+         flex-wrap: wrap;
+             justify-content: space-around;
+         }
+         #buffer{
+            width:100%;
+         }
+         #actual{
+            color:red;
+            display:flex;
+            font-size:9px;
+            font-weight:bold,;
+         }
+          #remove{
+          height: 30px;
+          margin-top: 10px;
+          }
+         #actual p:empty + #remove{
+            display:none;
+         }
+         #name{
+         width: 100%;
+         display:none;
+         }
+         #buffer:empty + #name{
+            display:block;
+         }
+         #buffer:empty ~ #clear {
+          opacity: 0.2;
+          pointer-events:none;
+         }
+         textarea,input {
+         width: 100%;
+         padding: 7px;
+         margin: 5px auto;
+         background: #fdfdfd;
+         border: none;
+         box-shadow: 0 0 30px #ddd inset;
+         }
+         select {
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+         padding: 6px;
+         border: none;
+         border-bottom: 1px solid #ddd;
+         border-radius: 0;
+         background: #fff;
+         width: 59%;
+         background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0LjgzIDE2LjQybDkuMTcgOS4xNyA5LjE3LTkuMTcgMi44MyAyLjgzLTEyIDEyLTEyLTEyeiIvPjxwYXRoIGQ9Ik0wLS43NWg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+);
+         background-repeat: no-repeat;
+         background-size: auto 20px;
+         background-position: right center;
+         margin-right:10px;
+         }
+         #fill{
+         width:36%;
+         }
+         #boton, button{
+         background: #7cd07c;
+         border: none;
+         text-align: center;
+         border-radius: 5px;
+         color: #FFF;
+         padding: 6px;
+         display: inline-block;
+         font-size:1.1em;
+         text-transform: uppercase;
+         width:  30%;
+         }
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+
+      </style>
+      <script type="text/javascript" src="jquery-3.js"></script>
+      <script type="text/javascript" src="popup.js"></script>
+   </head>
+   <body>
+      <header>
+         <div id="buffer"></div>
+       <input type="text" name="name" id="name" placeholder="Url css">
+      <button id="copy"> Copy </button><button id="clear"> Clear </button>   <button id="fill"> Paste </button>    
+      </header>
+
+     
+<div id="actual"> <p></p><button id="remove"> X </button> </div>
+     
+
+
+</textarea>
+
+   </body>
+</html>
