@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, function(response) {
             if (response.farewell != "") {
                 $("#actual p").html(response.farewell)
-                    /*   chrome.browserAction.setIcon({
-                           path: "icon_red.png"
-                       });*/
             }
         });
     });
